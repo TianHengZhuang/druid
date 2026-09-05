@@ -31,7 +31,7 @@ public interface DataSourceSelector {
 
     /**
      * Set the target DataSource name to return.
-     * Wether to use this or not, it's decided by the implemention.
+     * Whether to use this or not, it's decided by the implemention.
      */
     void setTarget(String name);
 
