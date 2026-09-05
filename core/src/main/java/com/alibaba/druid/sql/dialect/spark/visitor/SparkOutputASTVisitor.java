@@ -86,12 +86,12 @@ public class SparkOutputASTVisitor extends HiveOutputVisitor implements SparkAST
         if (serdeProperties.size() > 0) {
             println();
             print0(ucase ? "TBLPROPERTIES (" : "tblproperties (");
-            String seperator = "";
+            String separator = "";
             for (Entry<String, SQLObject> entry : serdeProperties.entrySet()) {
                 print0("'" + entry.getKey() + "'='");
                 entry.getValue().accept(this);
-                print0("'" + seperator);
-                seperator = ",";
+                print0("'" + separator);
+                separator = ",";
             }
             print(')');
         }
